@@ -2,7 +2,7 @@ from dao.model.movie import Movie
 
 class MovieDAO:
 
-    def __int__(self, session):
+    def __init__(self, session):
         self.session = session
         self.model = Movie
 

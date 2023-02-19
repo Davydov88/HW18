@@ -29,8 +29,8 @@ def create_data(app, db):
 
 
 
-        with db.session.begin():
-            db.session.add_all()
+        # with db.session.begin():
+        #     db.session.add_all()
 
 
 app = create_app(Config())
