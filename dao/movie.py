@@ -28,11 +28,9 @@ class MovieDAO:
         return movie
 
 
-    def update(self,data):
-        mid = data.pop('id')
-        movie = self.get_by_id(data[mid])
-        for field_name, field_value in data.items():
-            setattr(movie, field_name, field_value)
+    def update(self, data):
+        movie = self.get_by_id(data['id'])
+        movie.name = data['name']
 
         self.session.add(movie)
         self.session.commit()
